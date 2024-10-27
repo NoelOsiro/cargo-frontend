@@ -28,8 +28,8 @@ function App() {
           <div className="flex items-center justify-center mb-4">
             <Package className="w-12 h-12 text-blue-600" />
           </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-2">Cargo Tracking</h1>
-          <p className="text-gray-600">Track your shipment with ease</p>
+          <h1 className="text-4xl font-bold text-gray-900 mb-2">Supply Chain Tracker</h1>
+          <p className="text-gray-600">Track your cargo across the global supply chain</p>
         </div>
 
         <div className="flex justify-center mb-8">
@@ -48,7 +48,13 @@ function App() {
 
         {!shipment && !error && (
           <div className="text-center text-gray-600 mt-8">
-            <p>Try searching with tracking number: TRK123456789</p>
+            <p>Try searching with these tracking numbers:</p>
+            <p className="mt-2">
+              <code className="bg-gray-100 px-2 py-1 rounded">TRK123456789</code> - Container Shipment
+            </p>
+            <p className="mt-1">
+              <code className="bg-gray-100 px-2 py-1 rounded">TRK987654321</code> - Temperature-Controlled Shipment
+            </p>
           </div>
         )}
       </div>
